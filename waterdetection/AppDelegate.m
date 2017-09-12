@@ -17,6 +17,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //
+//    self.window.hidden = NO;
+//    
+//    [self.window.rootViewController performSegueWithIdentifier:@"ShowWebView" sender:self.window.rootViewController];
+//    
+//    // Now that the window is not hidden, we must make it key.
+//    [self.window makeKeyWindow];
+    //
+    
+    
     return YES;
 }
 
