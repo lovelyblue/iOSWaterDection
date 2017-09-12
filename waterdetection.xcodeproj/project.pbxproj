@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED9A54CC1F68152D00E84517 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9A54CB1F68152D00E84517 /* WebViewController.m */; };
+		ED9A54CF1F68314F00E84517 /* BlankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9A54CE1F68314F00E84517 /* BlankViewController.m */; };
 		EDA645EB1F526E5C00782312 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA645EA1F526E5C00782312 /* main.m */; };
 		EDA645EE1F526E5C00782312 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA645ED1F526E5C00782312 /* AppDelegate.m */; };
 		EDA645F11F526E5C00782312 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDA645F01F526E5C00782312 /* ViewController.m */; };
@@ -16,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED9A54CA1F68152D00E84517 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		ED9A54CB1F68152D00E84517 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		ED9A54CD1F68314F00E84517 /* BlankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlankViewController.h; sourceTree = "<group>"; };
+		ED9A54CE1F68314F00E84517 /* BlankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlankViewController.m; sourceTree = "<group>"; };
 		EDA645E61F526E5C00782312 /* waterdetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = waterdetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA645EA1F526E5C00782312 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EDA645EC1F526E5C00782312 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +73,10 @@
 				EDA645F71F526E5C00782312 /* LaunchScreen.storyboard */,
 				EDA645FA1F526E5C00782312 /* Info.plist */,
 				EDA645E91F526E5C00782312 /* Supporting Files */,
+				ED9A54CA1F68152D00E84517 /* WebViewController.h */,
+				ED9A54CB1F68152D00E84517 /* WebViewController.m */,
+				ED9A54CD1F68314F00E84517 /* BlankViewController.h */,
+				ED9A54CE1F68314F00E84517 /* BlankViewController.m */,
 			);
 			path = waterdetection;
 			sourceTree = "<group>";
@@ -153,6 +163,8 @@
 				EDA645F11F526E5C00782312 /* ViewController.m in Sources */,
 				EDA645EE1F526E5C00782312 /* AppDelegate.m in Sources */,
 				EDA645EB1F526E5C00782312 /* main.m in Sources */,
+				ED9A54CC1F68152D00E84517 /* WebViewController.m in Sources */,
+				ED9A54CF1F68314F00E84517 /* BlankViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +321,7 @@
 				EDA645FF1F526E5C00782312 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
