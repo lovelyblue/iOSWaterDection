@@ -1,14 +1,41 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I3a-KR-ptY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Blank View Controller-->
+        <scene sceneID="i4j-7K-H26">
+            <objects>
+                <viewController id="I3a-KR-ptY" customClass="BlankViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vFJ-WH-xgX"/>
+                        <viewControllerLayoutGuide type="bottom" id="9YY-ga-Bp1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Whd-9S-4Y7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="modal" identifier="BtoMain" id="8Sj-kW-aPg"/>
+                        <segue destination="llg-ZO-ZFz" kind="modal" identifier="BtoWebView" id="dO8-f1-UlZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qcn-8j-HzO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1354" y="-181"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +43,111 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="請輸入設備代碼：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEU-yH-Zrx">
+                                <rect key="frame" x="16" y="20" width="178" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Clw-oa-d8b">
+                                <rect key="frame" x="16" y="49" width="282" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AD-6M-mO4">
+                                <rect key="frame" x="0.0" y="87" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="確定"/>
+                                <connections>
+                                    <action selector="btnConfirmPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bov-Q6-k1i"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gX3-7j-iio">
+                                <rect key="frame" x="16" y="125" width="343" height="440"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">•第一次使用請輸入設備代碼
+
+此「使用條款（即權利與義務宣告）」用以規範本軟體使用者、富鈞水資及受控端互動的人士之關係。
+
+本公司可於任何時間修改使用條款之內容，並保留所有未明確授予您的權利，請您仔細閱讀條款內容，並隨時注意條款的修改狀況，您若於修改後繼續使用本服務，表示您瞭解並同意修改後的條款，如果您不同意以下條款之所有內容及其後的修改變更，請您立即停止使用此平台所提供的各項服務。
+
+•本平台內所有內容，包括但不限於文字、軟體、聲音、圖片、影片、圖表、網站架構、網站畫面的安排、網頁設計等均由本公司或其他權利人依法擁有非經本公司或其他權利人書面同意，不得擅自使用、修改、複製、傳播、變更、散佈、發行、出售、交易、轉售、作任何目的使用或存取或發表相關內容。
+•本公司無法保證本系統不受駭客之惡意攻擊，若因駭客之攻擊造成資料被竄改或外洩，其可能造成之損害，不負任何賠償責任。
+•用戶不得上傳病毒或其他惡意代碼。
+•本公司保留隨時暫時或終止提供服務之權利，您不可以因此要求任何賠償或補償。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="myAddress" destination="Clw-oa-d8b" id="lxC-gd-aia"/>
+                        <segue destination="llg-ZO-ZFz" kind="modal" identifier="ShowWebView" id="lWP-vn-d1x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-202" y="123"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="4mu-Jc-fgQ">
+            <objects>
+                <viewController id="llg-ZO-ZFz" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B6P-Pw-AHg"/>
+                        <viewControllerLayoutGuide type="bottom" id="bYa-Qw-FF4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4CE-Gh-opV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9HC-wZ-zAV">
+                                <rect key="frame" x="0.0" y="58" width="375" height="609"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3hC-Tf-lEa">
+                                <rect key="frame" x="16" y="20" width="343" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtU-bF-hVu">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <state key="normal" title="登出"/>
+                                        <connections>
+                                            <action selector="logoutPressed:" destination="llg-ZO-ZFz" eventType="touchUpInside" id="bOu-Eo-eZh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9HC-wZ-zAV" firstAttribute="top" secondItem="3hC-Tf-lEa" secondAttribute="bottom" constant="8" symbolic="YES" id="74i-vJ-y3T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3hC-Tf-lEa" secondAttribute="trailing" id="8UQ-C6-iC1"/>
+                            <constraint firstItem="3hC-Tf-lEa" firstAttribute="leading" secondItem="4CE-Gh-opV" secondAttribute="leadingMargin" id="AA7-9m-eUd"/>
+                            <constraint firstItem="3hC-Tf-lEa" firstAttribute="centerX" secondItem="9HC-wZ-zAV" secondAttribute="centerX" id="DkP-7u-o3O"/>
+                            <constraint firstItem="3hC-Tf-lEa" firstAttribute="top" secondItem="B6P-Pw-AHg" secondAttribute="bottom" id="b6K-tE-MqD"/>
+                            <constraint firstItem="9HC-wZ-zAV" firstAttribute="bottom" secondItem="bYa-Qw-FF4" secondAttribute="top" id="saJ-Yg-XPn"/>
+                            <constraint firstItem="9HC-wZ-zAV" firstAttribute="leading" secondItem="4CE-Gh-opV" secondAttribute="leading" id="xxE-xh-OFe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mIi-zS-hpi"/>
+                    <connections>
+                        <outlet property="oWebView" destination="9HC-wZ-zAV" id="OyZ-pP-hTd"/>
+                        <segue destination="BYZ-38-t0r" kind="modal" identifier="showMain" id="yif-9E-drc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wQN-9C-fhu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="122.78860569715144"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="8Sj-kW-aPg"/>
+        <segue reference="dO8-f1-UlZ"/>
+    </inferredMetricsTieBreakers>
 </document>
